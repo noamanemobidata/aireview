@@ -23,7 +23,7 @@ library(data.table)
 library(purrr)
 library(plyr)
 library(pool)
-
+library(dbplyr)
 
 OPENAI_API_KEY <- Sys.getenv("OPENAI_API_KEY")
 DETAIL_KEY <- Sys.getenv("DETAIL_KEY") 
