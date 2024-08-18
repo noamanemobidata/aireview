@@ -53,9 +53,9 @@ onStop(function() {
 })
 
 
-checkCounter <- function(pool, email){
+checkCounter <- function(pool, user_email){
   
-  tbl(pool,USER_TABLE ) %>% filter(email==email)%>% pull(query_count)
+  tbl(pool,USER_TABLE ) %>% filter(email==user_email)%>% pull(query_count)
   
 }
 
@@ -215,7 +215,10 @@ server = function(input, output, session) {
     output$progressbare <- renderUI({
       
       f$req_sign_in() # Requiert une connexion
-      shinyWidgets::progressBar(id = "prg",value = as.integer( query_count()),range_value = c(0,10),total = 10,title = "Limit" ,  striped = T, status = "success",size = "xs")
+      
+      val <- as.integer( query_count())
+      print(val)
+      shinyWidgets::progressBar(id = "prg",value =val ,range_value = c(0,10),total = 10,title = "Limit" ,  striped = T, status = "success",size = "xs")
       
     })
     
