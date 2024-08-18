@@ -31,7 +31,7 @@ RUN R -e 'renv::restore()'
 RUN R -e 'reticulate::py_install(packages = c("fake_useragent","requests", "uuid"), pip=T)'
 
 COPY www/ /app/www
-COPY functions.py /app/
+COPY airbnb_functions.py /app/
 COPY app.R /app/
 
 EXPOSE 8080
