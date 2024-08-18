@@ -8,14 +8,17 @@ RUN apt-get update
 
 RUN apt-get install -y wget && rm -rf /var/lib/apt/lists/*
   
-  RUN wget \
+RUN wget \
 https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh \
 && mkdir /root/.conda \
 && bash Miniconda3-latest-Linux-x86_64.sh -b \
 && rm -f Miniconda3-latest-Linux-x86_64.sh
 
 RUN apt-get update && apt-get install --no-install-recommends -y git-all python3.8-venv python3-pip \
-libxml2-dev libssl-dev libpng-dev libv8-dev jq libcurl4-openssl-dev libsasl2-dev libopenblas-dev odbc-postgresql
+libxml2-dev libssl-dev libpng-dev libv8-dev jq libcurl4-openssl-dev libsasl2-dev libopenblas-dev odbc-postgresql \
+unixodbc unixodbc-dev
+
+RUN echo "[postgresql]\nDriver = /usr/lib/x86_64-linux-gnu/odbc/psqlodbcw.so" >> /etc/odbcinst.ini
 
 
 ENV RENV_VERSION v1.0.7
