@@ -1,0 +1,90 @@
+.elevation-3 {
+     box-shadow: none!important; */
+}
+#sidebar .img-circle {
+     border-radius: 0%!important; 
+}
+
+
+.custom-control{display:none;}
+.content-wrapper{
+              background-image: url(big-1-light-ed777706.svg);
+              background-size: cover;
+}
+
+.card-title{
+  width: 100%;
+}
+
+
+
+body ::-webkit-scrollbar-track {
+    background: transparent!important;
+}
+
+
+ui.comments .comment .avatar img, .ui.comments .comment img.avatar {
+
+    border-radius: 50%!important;
+}
+
+.card-body{
+   overflow-y: scroll;
+}
+
+.ui.comments .comment .avatar img, .ui.comments .comment img.avatar {
+    border-radius: 50%;
+}
+
+.img-fluid {
+    border-radius: 10px!important;
+}
+
+.form-control {
+  border-radius: 16px!important;
+  display: inline!important;
+}
+
+.ui.comments .comment .avatar img, .ui.comments .comment img.avatar {
+    margin: 13px auto!important;
+}
+
+.card {
+  background: transparent!important;
+  
+}
+
+#canvas{
+  width: 100%!important;
+  border-radius: 10px!important;
+}
+
+#ncl {
+  display: inline!important;
+  width: 60px!important;
+}
+
+.shiny-input-container{
+display: inline!important;
+}
+
+    
+    
+.waiter-overlay {
+  height: 90vh;
+  backdrop-filter: blur( 1px );
+  /*background-color:  rgba( 0, 0, 0, 0.4 ) !important;*/
+}
+
+.card-body{
+ display: flex!important;
+    flex-direction: column-reverse!important; 
+}
+
+.callout {
+  background-color: transparent!important;
+}
+
+#ZER .card-body{
+    flex-direction: column!important; 
+}
