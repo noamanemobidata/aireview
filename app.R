@@ -399,7 +399,7 @@ server = function(input, output, session) {
         content_type_json(),
         encode = "json",
         body = list(
-          model = "gpt-3.5-turbo",
+          model = "gpt-4o-mini",
           temperature = 1,
           messages = list(list(
             role = "user",
