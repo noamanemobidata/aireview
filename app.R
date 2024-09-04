@@ -393,7 +393,7 @@ server = function(input, output, session) {
       )
       
       
-      response <<- POST(
+      response <- POST(
         url = "https://api.openai.com/v1/chat/completions",
         add_headers(Authorization = paste("Bearer", OPENAI_API_KEY)),
         content_type_json(),
@@ -813,7 +813,7 @@ server = function(input, output, session) {
           content_type_json(),
           encode = "json",
           body = list(
-            model = "gpt-3.5-turbo",
+            model = "gpt-4o-mini",
             temperature = 1,
             messages = list(list(
               role = "user",
